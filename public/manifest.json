@@ -1,0 +1,46 @@
+{
+   "manifest_version":3,
+   "version":"1.0.0",
+   "name":"Website Blocker",
+   "description":"This extension block sites",
+
+   "action":{
+    "default_popup":"index.html",
+    "default_title":"My React Extension"
+   },
+   "permissions":[
+    "storage","tabs","activeTab"
+   ],
+   "host_permissions":[
+    "http://*/*",
+    "https://*/*"
+   ],
+   "icons":{
+    "32":"icon32.png",
+    "48":"icon32.png",
+    "128":"icon32.png"
+   },
+
+   "content_scripts":[
+      {
+         "matches":[ "http://*/*",
+         "https://*/*"],
+
+         "js":["ContentScript.js"]
+      }
+   ],
+
+
+   "background":{
+      "service_worker": "background.js"
+   }
+
+
+
+   
+
+   
+
+
+
+}
